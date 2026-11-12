@@ -1,0 +1,64 @@
+.checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &.is-horizontal {
+    flex-direction: row;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--White);
+  border: 2px solid var(--Slate-300);
+  border-radius: 2px;
+  position: relative;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("/check.svg") no-repeat center center / contain;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:checked {
+    border-color: var(--Blue-500);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--Blue-500);
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--Slate-700);
+
+  @media (width >= 768px) {
+    font-size: 18px;
+  }
+}

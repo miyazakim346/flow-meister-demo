@@ -1,0 +1,66 @@
+/* fv */
+.fv {
+  padding-block: 378px 55px;
+  position: relative;
+  background: url(/fv-bg-sp.png) no-repeat top 90px center / auto 289px;
+
+  @media (width >= 768px) {
+    padding-block: 206px 191px;
+    background-image: url(/fv-bg-pc.png);
+    background-position: top 125px center;
+    background-size: auto 534px;
+  }
+}
+
+.content {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 36px;
+
+  @media (width >= 768px) {
+    width: calc(1160px + 20px * 2);
+    padding-inline: 20px;
+  }
+}
+
+.catch {
+  color: var(--Blue-500);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.6;
+
+  @media (width >= 768px) {
+    font-size: 40px;
+  }
+
+  @media (width >= 1024px) {
+    font-size: 48px;
+  }
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  @media (width >= 768px) {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  @media (width >= 1024px) {
+    font-size: 20px;
+  }
+}
+
+.button {
+  margin-top: 24px;
+  text-align: center;
+
+  @media (width >= 768px) {
+    margin-top: 36px;
+    text-align: left;
+  }
+}

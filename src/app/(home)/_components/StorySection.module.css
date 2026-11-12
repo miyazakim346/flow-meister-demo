@@ -1,0 +1,123 @@
+/* story */
+.story {
+  padding-block: 60px 80px;
+  background: var(--White);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 1px); /* サブピクセルレンダリング対策 */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: url(/story-section-wave-sp.svg) no-repeat center / 100% 100%;
+  }
+
+  @media (width >= 768px) {
+    padding-block: 108px 180px;
+
+    &::before {
+      height: 87px;
+      background-image: url(/story-section-wave-pc.svg);
+    }
+  }
+}
+
+.container {
+  width: calc(1160px + 20px * 2);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-inline: auto;
+  padding-inline: 28px;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    gap: 80px;
+    padding-inline: 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (width >= 768px) {
+    align-items: flex-start;
+    gap: 28px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  @media (width >= 768px) {
+    font-size: 20px;
+  }
+}
+
+.imageArea {
+  width: 294px;
+  flex-shrink: 0;
+  text-align: center;
+
+  @media (width >= 768px) {
+    width: calc(388 / 1160 * 100%);
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 8px solid var(--Sky-400);
+  box-shadow: 0px 5px 15px -3px rgba(96, 165, 250, 0.15), 0px -5px 6px -4px rgba(96, 165, 250, 0.1);
+}
+
+.box {
+  width: 224px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  padding: 16px 24px;
+  gap: 4px;
+  margin-top: -40px;
+  border-radius: 20px;
+  background: var(--White);
+  box-shadow: 0px 5px 15px -3px rgba(96, 165, 250, 0.15), 0px -5px 6px -4px rgba(96, 165, 250, 0.1);
+  position: relative;
+  z-index: 1;
+
+  @media (width >= 768px) {
+    width: 339px;
+  }
+}
+
+.logo {
+  display: block;
+  width: 116px;
+
+  @media (width >= 768px) {
+    width: 143px;
+  }
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.8;
+}

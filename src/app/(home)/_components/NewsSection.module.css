@@ -1,0 +1,54 @@
+/* news */
+.news {
+  padding-block: 60px;
+  background: var(--Sky-50);
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: calc(100% - 1px); /* サブピクセルレンダリング対策 */
+    left: 0;
+    background: url(/news-section-wave-sp.svg) no-repeat center / 100% 100%;
+  }
+
+  @media (width >= 768px) {
+    padding-block: 80px;
+
+    &::before {
+      height: 72px;
+      background-image: url(/news-section-wave-pc.svg);
+    }
+  }
+}
+
+.container {
+  width: calc(1024px + 20px * 2);
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 16px;
+  display: grid;
+  gap: 20px;
+
+  @media (width >= 768px) {
+    padding-inline: 20px;
+    gap: 36px;
+  }
+}
+
+.textNotFound {
+  text-align: center;
+}
+
+.cards {
+}
+
+.card {
+  border-bottom: 2px solid var(--Gray-200);
+}
+
+.button {
+  text-align: center;
+}

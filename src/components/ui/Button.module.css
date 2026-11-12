@@ -1,0 +1,41 @@
+.button {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--Blue-500);
+  border-radius: 48px;
+  background: var(--Blue-500);
+  color: var(--White);
+  font-family: var(--font-m-plus-1p);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--White);
+      color: var(--Blue-500);
+    }
+  }
+
+  @media (width >= 768px) {
+    padding-inline: 80px;
+    font-size: 20px;
+  }
+}
+
+.icon {
+  width: 18px;
+}
+
+.icon path {
+  fill: currentColor;
+  transition: fill 0.3s;
+}

@@ -1,0 +1,54 @@
+.form {
+  display: grid;
+  gap: 36px;
+}
+
+.body {
+  display: grid;
+  gap: 20px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field:has(:user-invalid) .error,
+.privacy:has(:user-invalid) .error {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.privacyText {
+}
+
+.submit {
+  text-align: center;
+}
+
+.error {
+  display: none;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.submitError {
+  display: none;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}

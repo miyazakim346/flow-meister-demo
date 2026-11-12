@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    gap: 30px;
+
+    &.isReverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.box {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--White);
+  box-shadow: 0px 5px 15px -3px rgba(96, 165, 250, 0.15), 0px -5px 6px -4px rgba(96, 165, 250, 0.1);
+
+  @media (width >= 768px) {
+    padding: 32px;
+  }
+}
+
+.point {
+  color: var(--Blue-500);
+  font-family: var(--font-montserrat);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (width >= 768px) {
+    font-size: 36px;
+  }
+}
+
+.heading {
+  margin-top: 8px;
+  color: var(--Slate-700);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  @media (width >= 768px) {
+    font-size: 24px;
+  }
+}
+
+.text {
+  margin-top: 8px;
+  color: var(--Slate-700);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  @media (width >= 768px) {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+}
+
+.imageBox {
+  flex-shrink: 0;
+
+  @media (width >= 768px) {
+    flex-basis: calc(456 / 1240 * 100%);
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}

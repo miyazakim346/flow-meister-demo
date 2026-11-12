@@ -1,0 +1,53 @@
+.cta {
+  padding: 20px 20px 10px 20px;
+  background: var(--White);
+}
+
+.content {
+  padding: 36px 24px;
+  border-radius: 16px;
+  background: var(--Sky-200) url(/cta-bg-sp.png) no-repeat center center / cover;
+
+  @media (width >= 768px) {
+    padding: 48px 40px;
+    background-image: url(/cta-bg-pc.png);
+  }
+}
+
+.description {
+  width: fit-content;
+  margin-top: 36px;
+  margin-inline: auto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: left;
+
+  @media (width >= 768px) {
+    text-align: center;
+  }
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 36px;
+  flex-direction: column;
+  align-items: center;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+  }
+}
+
+.button {
+  display: grid;
+  width: 100%;
+
+  @media (width >= 768px) {
+    display: inline-block;
+    width: auto;
+  }
+}

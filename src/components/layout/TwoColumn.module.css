@@ -1,0 +1,61 @@
+.twoColumn {
+  padding-block: 40px;
+  background: var(--Sky-50);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 1px); /* サブピクセルレンダリング対策 */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: url(/page-wave-sp.svg) no-repeat center / 100% 100%;
+  }
+
+  @media (width >= 768px) {
+    padding-block: 60px;
+
+    &::before {
+      height: 92px;
+      background-image: url(/page-wave-pc.svg);
+    }
+  }
+}
+
+.container {
+  width: calc(1240px + 20px * 2);
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+
+  @media (width >= 1024px) {
+    padding-inline: 20px;
+    grid-template-columns: minmax(0, 1fr) calc(420 / 1240 * 100%);
+  }
+}
+
+.main {
+}
+
+.content {
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: var(--White);
+
+  @media (width >= 768px) {
+    padding-inline: 40px;
+  }
+}
+
+.aside {
+}
+
+.widgets {
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: var(--White);
+}
